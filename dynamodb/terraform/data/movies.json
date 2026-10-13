@@ -1,0 +1,76 @@
+[
+  {
+    "year": { "N": "2013" },
+    "title": { "S": "Rush" },
+    "info": {
+      "M": {
+        "directors": { "L": [{ "S": "Ron Howard" }] },
+        "release_date": { "S": "2013-09-02T00:00:00Z" },
+        "rating": { "N": "8.3" },
+        "genres": { "L": [{ "S": "Action" }, { "S": "Biography" }, { "S": "Drama" }, { "S": "Sport" }] },
+        "plot": { "S": "A re-creation of the merciless 1970s rivalry between Formula One rivals James Hunt and Niki Lauda." },
+        "rank": { "N": "2" },
+        "running_time_secs": { "N": "7380" },
+        "actors": { "L": [{ "S": "Daniel Bruhl" }, { "S": "Chris Hemsworth" }, { "S": "Olivia Wilde" }] }
+      }
+    }
+  },
+  {
+    "year": { "N": "2013" },
+    "title": { "S": "Prisoners" },
+    "info": {
+      "M": {
+        "directors": { "L": [{ "S": "Denis Villeneuve" }] },
+        "release_date": { "S": "2013-08-30T00:00:00Z" },
+        "rating": { "N": "8.2" },
+        "genres": { "L": [{ "S": "Crime" }, { "S": "Drama" }, { "S": "Thriller" }] },
+        "plot": { "S": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads." },
+        "rank": { "N": "3" },
+        "running_time_secs": { "N": "9180" },
+        "actors": { "L": [{ "S": "Hugh Jackman" }, { "S": "Jake Gyllenhaal" }, { "S": "Viola Davis" }] }
+      }
+    }
+  },
+  {
+    "year": { "N": "2014" },
+    "title": { "S": "Interstellar" },
+    "info": {
+      "M": {
+        "directors": { "L": [{ "S": "Christopher Nolan" }] },
+        "release_date": { "S": "2014-11-05T00:00:00Z" },
+        "rating": { "N": "8.6" },
+        "genres": { "L": [{ "S": "Adventure" }, { "S": "Drama" }, { "S": "Sci-Fi" }] },
+        "plot": { "S": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival." },
+        "rank": { "N": "1" },
+        "running_time_secs": { "N": "10140" },
+        "actors": { "L": [{ "S": "Matthew McConaughey" }, { "S": "Anne Hathaway" }, { "S": "Jessica Chastain" }] }
+      }
+    }
+  },
+  {
+    "year": { "N": "2015" },
+    "title": { "S": "The Big New Movie" },
+    "info": {
+      "M": {
+        "plot": { "S": "Nothing happens at all." },
+        "rating": { "N": "0" }
+      }
+    }
+  },
+  {
+    "year": { "N": "1985" },
+    "title": { "S": "Back to the Future" },
+    "info": {
+      "M": {
+        "directors": { "L": [{ "S": "Robert Zemeckis" }] },
+        "release_date": { "S": "1985-07-03T00:00:00Z" },
+        "rating": { "N": "8.5" },
+        "genres": { "L": [{ "S": "Adventure" }, { "S": "Comedy" }, { "S": "Sci-Fi" }] },
+        "plot": { "S": "Marty McFly is accidentally sent thirty years into the past in a time-traveling DeLorean." },
+        "rank": { "N": "4" },
+        "running_time_secs": { "N": "6960" },
+        "actors": { "L": [{ "S": "Michael J. Fox" }, { "S": "Christopher Lloyd" }, { "S": "Lea Thompson" }] }
+      }
+    }
+  }
+]
