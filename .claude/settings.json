@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(terraform fmt:*)",
+      "Bash(terraform validate:*)",
+      "Bash(terraform init:*)",
+      "Bash(terraform plan:*)",
+      "Bash(terraform show:*)",
+      "Bash(terraform output:*)",
+      "Bash(terraform providers:*)",
+      "Bash(terraform version)",
+      "Bash(terraform graph:*)",
+      "Bash(terraform console:*)",
+      "Bash(terraform state list:*)",
+      "Bash(terraform state show:*)",
+      "Bash(aws sts get-caller-identity:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Read(~/.ssh/ec2-lab-key.pub)",
+      "WebFetch(domain:cloudjourney.awsstudygroup.com)",
+      "WebFetch(domain:registry.terraform.io)",
+      "WebFetch(domain:developer.hashicorp.com)",
+      "WebFetch(domain:docs.aws.amazon.com)"
+    ],
+    "ask": [
+      "Bash(terraform import:*)",
+      "Bash(terraform taint:*)",
+      "Bash(terraform untaint:*)",
+      "Bash(terraform state mv:*)",
+      "Bash(terraform workspace:*)",
+      "Bash(aws:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [
+      "Bash(terraform force-unlock:*)",
+      "Bash(terraform state rm:*)",
+      "Bash(terraform state push:*)",
+      "Bash(terraform apply)",
+      "Bash(terraform apply *)",
+      "Bash(terraform destroy)",
+      "Bash(terraform destroy *)",
+      "Bash(aws s3 rb:*)",
+      "Bash(aws s3 rm s3://fcaj-lab-tf-state-430118860011-ap-southeast-1-an:*)",
+      "Bash(aws s3api delete-bucket:*)",
+      "Bash(aws iam:*)",
+      "Read(~/.aws/credentials)",
+      "Read(~/.aws/config)",
+      "Read(~/.ssh/ec2-lab-key)",
+      "Read(~/.ssh/id_*)",
+      "Read(./**/*.tfstate)",
+      "Read(./**/*.tfstate.backup)",
+      "Read(./**/.env)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in *.tf|*.tfvars) terraform fmt \"$f\" >/dev/null 2>&1 || true ;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}
