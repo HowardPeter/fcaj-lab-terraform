@@ -1,5 +1,5 @@
 resource "aws_lb_target_group" "this" {
-  name             = "fcaj-tg"
+  name             = "fcaj-asg"
   port             = 5000
   protocol         = "HTTP"
   protocol_version = "HTTP1"
@@ -37,10 +37,4 @@ resource "aws_lb_listener" "this" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.this.arn
   }
-}
-
-resource "aws_lb_target_group_attachment" "this" {
-  target_group_arn = aws_lb_target_group.this.arn
-  target_id        = aws_instance.main.id
-  port             = 5000
 }

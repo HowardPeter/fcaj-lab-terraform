@@ -2,6 +2,9 @@
 
 set -e
 
+# cloud-init chạy script bằng root nhưng có thể không set HOME -> cố định để nvm/pm2 cài đúng vào /root
+export HOME=/root
+
 dnf update -y
 dnf install -y git mariadb105
 
@@ -103,7 +106,8 @@ npm install
 npm pkg set scripts.start="pm2 start app.js --name 'app' --watch"
 npm pkg set scripts.dev="nodemon app.js"
 
-sudo env PATH=$PATH:$(dirname $(which node)) $(which pm2) startup systemd -u $USER --hp $HOME
+# đăng ký pm2 với systemd để app tự chạy lại sau reboot (bắt buộc khi tạo AMI từ instance)
+env PATH=$PATH:$(dirname $(which node)) $(which pm2) startup systemd -u root --hp /root
 
 pm2 start app.js --name app --watch
 pm2 save

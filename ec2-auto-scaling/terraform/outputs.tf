@@ -1,7 +1,10 @@
-output "DNS_Name" {
-  value       = aws_lb.this.dns_name
+output "alb" {
+  value = {
+    dns_name = aws_lb.this.dns_name
+    port     = aws_lb.this.port
+  }
 }
 
-output "Instance_IPv4" {
-  value = aws_instance.main.public_ip
+output "asg_name" {
+  value = aws_autoscaling_group.app.name
 }
