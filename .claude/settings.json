@@ -4,7 +4,6 @@
     "allow": [
       "Bash(terraform fmt:*)",
       "Bash(terraform validate:*)",
-      "Bash(terraform init:*)",
       "Bash(terraform plan:*)",
       "Bash(terraform show:*)",
       "Bash(terraform output:*)",
@@ -25,6 +24,7 @@
       "WebFetch(domain:docs.aws.amazon.com)"
     ],
     "ask": [
+      "Bash(terraform init:*)",
       "Bash(terraform import:*)",
       "Bash(terraform taint:*)",
       "Bash(terraform untaint:*)",
